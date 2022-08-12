@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: grey;
+}
+a{
+    text-decoration: none;
+}
+.btn-toggle-menu{
+    cursor: pointer;
+    display: none;
+}
+#toggle-menu{
+    display: none;
+}
+.container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+nav{
+    background-color: snow;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+.menu li{
+    margin-left: 10px;
+    float: left;
+    list-style-type: none;
+}
+.menu li a{
+    display: block;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.menu li.active a{
+    color: #fff;
+    background-color: black;
+}
+.menu li a :hover{
+    color: #fff;
+    background-color: black;
+}
+@media screen and (max-width:567px){
+    nav{
+        flex-wrap: wrap;
+    }
+    .menu{
+        display: none;
+    }
+    .menu li{
+        text-align: center;
+        width: 100%;
+    }
+    .btn-toggle-menu{
+        display: unset;
+    }
+    #toggle-menu:checked +.menu{
+        display: block;
+        width: 100%;
+    }
+}
